@@ -1,0 +1,129 @@
+{
+  "guitars": {
+    "sixString": [
+      {
+        "name": "Standard",
+        "notes": [
+          {
+            "Name": "E2"
+          },
+          {
+            "Name": "A"
+          },
+          {
+            "Name": "D"
+          },
+          {
+            "Name": "G"
+          },
+          {
+            "Name": "B"
+          },
+          {
+            "Name": "E4"
+          }
+        ]
+      },
+      {
+        "name": "Drop D",
+        "notes": [
+          {
+            "Name": "D2"
+          },
+          {
+            "Name": "A"
+          },
+          {
+            "Name": "D"
+          },
+          {
+            "Name": "G"
+          },
+          {
+            "Name": "B"
+          },
+          {
+            "Name": "E4"
+          }
+        ]
+      },
+      {
+        "name": "Drop C",
+        "notes": [
+          {
+            "Name": "C2"
+          },
+          {
+            "Name": "G"
+          },
+          {
+            "Name": "C"
+          },
+          {
+            "Name": "F"
+          },
+          {
+            "Name": "A"
+          },
+          {
+            "Name": "D4"
+          }
+        ]
+      }
+    ],
+    "sevenString": [
+      {
+        "name": "Standard",
+        "notes": [
+          {
+            "Name": "B"
+          },
+          {
+            "Name": "E2"
+          },
+          {
+            "Name": "A"
+          },
+          {
+            "Name": "D"
+          },
+          {
+            "Name": "G"
+          },
+          {
+            "Name": "B"
+          },
+          {
+            "Name": "E4"
+          }
+        ]
+      },
+      {
+        "name": "Drop Ab",
+        "notes": [
+          {
+            "Name": "Ab"
+          },
+          {
+            "Name": "Eb2"
+          },
+          {
+            "Name": "Ab"
+          },
+          {
+            "Name": "Db"
+          },
+          {
+            "Name": "Gb"
+          },
+          {
+            "Name": "Bb"
+          },
+          {
+            "Name": "Eb4"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ERG Tuner</title>
+    <link rel="stylesheet" href="public/styles/style.css" />
+  </head>
+  <body>
+
+    <main>
+      <section class="wrapper">
+        <div class="app">
+
+          <h1>ERG Tuner</h1>
+          <form action="">
+            <label for="sixString">6 String</label>
+            <input type="radio" name="guitar" value="six-string" id="sixString">
+            
+            <label for="sevenString">7 String</label>
+            <input type="radio" name="guitar" value="seven-string" id="sevenString">
+          </form>
+    
+          <div class="six-string guitar">
+            <select name="tuning--six-string" id="six-string">
+              <option>Standard</option>
+              <option>Drop D</option>
+              <option>Drop C</option>
+            </select>
+      
+            <div class="strings">
+              <div class="string string1"></div>
+              <div class="string string2"></div>
+              <div class="string string3"></div>
+              <div class="string string4"></div>
+              <div class="string string5"></div>
+              <div class="string string6"></div>
+            </div>
+          </div>
+      
+          <div class="seven-string guitar"> 
+            <select name="tuning--seven-string" id="s-string">
+              <option>Standard</option>
+              <option>Drop Ab</option>
+            </select>
+      
+            <div class="strings">
+              <div class="string string1"></div>
+              <div class="string string2"></div>
+              <div class="string string3"></div>
+              <div class="string string4"></div>
+              <div class="string string5"></div>
+              <div class="string string6"></div>
+              <div class="string string7"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="public/scripts/app.js"></script>
+  </body>
+</html>

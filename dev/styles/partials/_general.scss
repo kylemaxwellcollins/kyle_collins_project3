@@ -1,0 +1,73 @@
+main {
+  background: rgb(231, 231, 231);
+  height: 100vh;
+  color: rgb(0, 0, 0);
+  h1 {
+    padding: 30px;
+    margin: 0;
+  }
+}
+
+.wrapper {
+  max-width: 1800px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.guitar {
+  text-align: center;
+}
+
+.six-string,
+.seven-string {
+  display: none;
+}
+
+.strings {
+  display: flex;
+  // justify-content: space-between;
+}
+
+input {
+  visibility: hidden;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+}
+
+select {
+  margin: 20px;
+}
+
+label {
+  padding: 10px;
+  border: 1px solid black;
+  &:hover {
+    cursor: pointer;
+
+  }
+}
+
+.string {
+  // display: flex;
+  height: 70vh;
+  width: 100px;
+  flex-grow: 1;
+  background: rebeccapurple;
+  margin: 0 10px;
+  // border-radius: 50%;
+  &:hover {
+    background: red;
+    cursor: pointer;
+  }
+}
+
+
