@@ -39,13 +39,17 @@ tunerApp.getTuning = function() {
       .children("option:selected")
       .val();
     // console.log(tunerApp.tuning);
+    // find the index of chosen option
+    tunerApp.indexOfTuning = $(this).children("option:selected").index();
+    // console.log(tunerApp.indexOfTuning);
 
     // Display corresponding note names on fret board
     tunerApp.strings = $(`.${tunerApp.guitarChoice}-string`);
+
     for (let i = 0; i < tunerApp.strings.length; i++) {
       // console.log(tunerApp.strings[i]);
-      console.log(tunerApp.data[tunerApp.guitarChoice][1]["notes"][i]);
-      // tunerApp.Strings[i].text(tunerApp.data[tunerApp.guitarChoice][0]["notes"][i]);
+      $(tunerApp.strings[i]).html(tunerApp.data[tunerApp.guitarChoice][tunerApp.indexOfTuning]["notes"][i]);
+      // console.log(tunerApp.data[tunerApp.guitarChoice][tunerApp.indexOfTuning]["notes"][i]);
     }
 
     // cues notes from chosen tuning
