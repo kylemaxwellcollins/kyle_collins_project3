@@ -1,5 +1,5 @@
 main {
-  background: #FAFAFA;
+  background: #fafafa;
   height: 100vh;
   color: rgb(0, 0, 0);
   h1 {
@@ -33,11 +33,9 @@ main {
 
 .strings {
   display: flex;
-  // justify-content: space-between;
 }
 
 input {
-  // visibility: hidden;
   display: none;
 }
 
@@ -73,7 +71,11 @@ label {
   height: 70vh;
   // width: 100px;
   flex-grow: 1;
-  background: #443022;
+  background: url("../../../assets/images/john-matychuk-491429-unsplash.jpg")
+    center;
+  background-size: cover;
+  border: none;
+  color: #fafafa;
   // margin: 0 10px;
   // border: 2px solid white;
   &::after {
@@ -89,4 +91,9 @@ label {
     box-shadow: 5px 5px 10px #232323;
     cursor: pointer;
   }
+}
+
+button {
+  // background-image: url("../../../assets/images/john-matychuk-491429-unsplash.jpg");
+  border: none;
 }

@@ -38,29 +38,24 @@ tunerApp.getTuning = function() {
     tunerApp.tuning = $(this)
       .children("option:selected")
       .val();
-    // console.log(tunerApp.tuning);
-    // find the index of chosen option
-    tunerApp.indexOfTuning = $(this).children("option:selected").index();
-    // console.log(tunerApp.indexOfTuning);
-
+    
     // Display corresponding note names on fret board
     tunerApp.strings = $(`.${tunerApp.guitarChoice}-string`);
-
+    // find the index of chosen option
+    tunerApp.indexOfTuning = $(this).children("option:selected").index();
+    
     for (let i = 0; i < tunerApp.strings.length; i++) {
-      // console.log(tunerApp.strings[i]);
       $(tunerApp.strings[i]).html(tunerApp.data[tunerApp.guitarChoice][tunerApp.indexOfTuning]["notes"][i]);
-      // console.log(tunerApp.data[tunerApp.guitarChoice][tunerApp.indexOfTuning]["notes"][i]);
     }
-
-    // cues notes from chosen tuning
   });
 };
 
 // listen for string click
 $(".string").on("click", function() {
-  console.log("play sound");
+
+  tunerApp.playedNote = ($(this).html());
   // play correct sound clip
-  const audio = new Audio("../../assets/music/test-sample.wav");
+  let audio = new Audio(`../../assets/music/${tunerApp.playedNote}.wav`);
   // audio.addEventListener(
   //   "ended",
   //   function() {
@@ -70,6 +65,7 @@ $(".string").on("click", function() {
   //   false
   // );
   audio.play();
+
   // play sound clip until a different string is clicked
 });
 

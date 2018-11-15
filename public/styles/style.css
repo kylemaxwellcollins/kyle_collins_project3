@@ -133,7 +133,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 main {
-  background: #FAFAFA;
+  background: #fafafa;
   height: 100vh;
   color: black; }
   main h1 {
@@ -191,7 +191,10 @@ label {
 .string {
   height: 70vh;
   flex-grow: 1;
-  background: #443022; }
+  background: url("../../../assets/images/john-matychuk-491429-unsplash.jpg") center;
+  background-size: cover;
+  border: none;
+  color: #fafafa; }
   .string::after {
     content: "";
     position: relative;
@@ -203,3 +206,6 @@ label {
     transform: scale(1.1);
     box-shadow: 5px 5px 10px #232323;
     cursor: pointer; }
+
+button {
+  border: none; }
