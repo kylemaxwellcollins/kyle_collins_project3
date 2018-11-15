@@ -180,8 +180,8 @@ label {
   height: 70vh;
   width: 100px;
   flex-grow: 1;
-  background: rebeccapurple;
-  margin: 0 10px; }
+  background: #443022; }
   .string:hover {
-    background: red;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px #232323;
     cursor: pointer; }

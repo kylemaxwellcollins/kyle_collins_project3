@@ -61,11 +61,19 @@ label {
   height: 70vh;
   width: 100px;
   flex-grow: 1;
-  background: rebeccapurple;
-  margin: 0 10px;
-  // border-radius: 50%;
+  background: #443022;
+  // margin: 0 10px;
+  // border: 2px solid white;
+  // &::after {
+  //   content: "";
+  //   position: relative;
+  //   height: 70vh;
+  //   width: 20px;  
+  //   background: hotpink;
+  // }
   &:hover {
-    background: red;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px #232323;
     cursor: pointer;
   }
 }

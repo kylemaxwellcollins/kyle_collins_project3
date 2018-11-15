@@ -16,7 +16,7 @@ tunerApp.displayGuitar = function() {
   // get users choice of guitar ie. 6 string, 7 string, 8 string
   $("input").on("change", true, function() {
     tunerApp.guitarChoice = $(this).attr("id");
-    console.log(tunerApp.guitarChoice);
+    // console.log(tunerApp.guitarChoice);
 
     // display correct GUI
     if (tunerApp.guitarChoice === "sixString") {
@@ -38,9 +38,16 @@ tunerApp.getTuning = function() {
     tunerApp.tuning = $(this)
       .children("option:selected")
       .val();
-    console.log(tunerApp.tuning);
+    // console.log(tunerApp.tuning);
 
     // Display corresponding note names on fret board
+    tunerApp.strings = $(`.${tunerApp.guitarChoice}-string`);
+    for (let i = 0; i < tunerApp.strings.length; i++) {
+      // console.log(tunerApp.strings[i]);
+      console.log(tunerApp.data[tunerApp.guitarChoice][1]["notes"][i]);
+      // tunerApp.Strings[i].text(tunerApp.data[tunerApp.guitarChoice][0]["notes"][i]);
+    }
+
     // cues notes from chosen tuning
   });
 };
@@ -49,6 +56,16 @@ tunerApp.getTuning = function() {
 $(".string").on("click", function() {
   console.log("play sound");
   // play correct sound clip
+  const audio = new Audio("../../assets/music/test-sample.wav");
+  // audio.addEventListener(
+  //   "ended",
+  //   function() {
+  //     this.currentTime = 0;
+  //     this.play();
+  //   },
+  //   false
+  // );
+  audio.play();
   // play sound clip until a different string is clicked
 });
 
