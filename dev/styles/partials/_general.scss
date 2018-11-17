@@ -10,20 +10,20 @@ main {
 
 .wrapper {
   max-width: 1800px;
-  width: 95%;
+  width: 80%;
   margin: 0 auto;
 }
 
 .app {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: center;
 }
 
 .guitar {
   text-align: center;
   max-width: 500px;
-  width: 90%;
+  width: 100%;
 }
 
 .six-string,
@@ -39,10 +39,19 @@ input {
   display: none;
 }
 
-form {
+form {  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #232323;
+  // margin-right: 3%;
   width: 30%;
+}
+
+.guitar-btn {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 30px;
 }
 
 select {
@@ -52,7 +61,7 @@ select {
   -webkit-appearance: none;
   appearance: none;
   border: 1px solid black;
-  width: 100%;
+  width: 80%;
   background-image: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png");
   background-repeat: no-repeat;
   background-position: 97% center;
@@ -67,30 +76,45 @@ label {
 }
 
 .string {
-  // display: flex;
   height: 70vh;
-  // width: 100px;
   flex-grow: 1;
-  background: url("../../../assets/images/john-matychuk-491429-unsplash.jpg")
-    center;
   background-size: cover;
   border: none;
   color: #fafafa;
-  // margin: 0 10px;
-  // border: 2px solid white;
-  &::after {
-    content: "";
-    position: relative;
-    height: 70vh;
-    width: 20px;
-    background: hotpink;
-    z-index: 10;
-  }
-  &:hover {
-    transform: scale(1.1);
-    box-shadow: 5px 5px 10px #232323;
+  &:hover, &:focus {
+    transform: scale(1.05);
+    box-shadow: 8px 0px 10px #232323;
+    border: 1px solid #fafafa;
     cursor: pointer;
   }
+}
+.string1 {
+  background: url("../../../assets/images/piece1.jpg") center;
+  background-size: cover;
+}
+.string2 {
+  background: url("../../../assets/images/piece2.jpg") center;
+  background-size: cover;
+}
+.string3 {
+  background: url("../../../assets/images/piece3.jpg") center;
+  background-size: cover;
+}
+.string4 {
+  background: url("../../../assets/images/piece4.jpg") center;
+  background-size: cover;
+}
+.string5 {
+  background: url("../../../assets/images/piece5.jpg") center;
+  background-size: cover;
+}
+.string6 {
+  background: url("../../../assets/images/piece6.jpg") center;
+  background-size: cover;
+}
+.string7 {
+  background: url("../../../assets/images/piece7.jpg") center;
+  background-size: cover;
 }
 
 button {

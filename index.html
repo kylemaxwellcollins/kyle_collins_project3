@@ -11,23 +11,35 @@
 
     <main>
       <section class="wrapper">
+        <h1>ERG Tuner</h1>
         <div class="app">
 
-          <h1>ERG Tuner</h1>
-          <form class="guitar" action="">
-            <label for="sixString">6 String</label>
-            <input type="radio" name="guitar" value="six-string" id="sixString">
-            
-            <label for="sevenString">7 String</label>
-            <input type="radio" name="guitar" value="seven-string" id="sevenString">
+          <form class="guitar-form" action="">
+            <div class="guitar-btn">
+              <label for="sixString">6 String</label>
+              <input type="radio" name="guitar" value="six-string" id="sixString">
+              
+              <label for="sevenString">7 String</label>
+              <input type="radio" name="guitar" value="seven-string" id="sevenString">
+              
+            </div>
+            <select class="six-string" name="tuning--six-string" id="six-string">
+              <option id="default">Standard</option>
+              <option>Half Step Down</option>
+              <option>Drop D</option>
+              <option>Drop C</option>
+              <option>Drop B</option>
+              <!-- <option>DADGAD</option> -->
+              <!-- <option>Open C</option> -->
+              <!-- <option>Open  D</option> -->
+            </select>
+            <select class="seven-string" name="tuning--seven-string" id="seven-string">
+              <option>Standard</option>
+              <option>Drop Ab</option>
+            </select>
           </form>
     
           <div class="six-string guitar">
-            <select name="tuning--six-string" id="six-string">
-              <option>Standard</option>
-              <option>Drop D</option>
-              <option>Drop C</option>
-            </select>
       
             <div class="strings">
               <button class="sixString-string string string1"></button>
@@ -40,10 +52,6 @@
           </div>
       
           <div class="seven-string guitar"> 
-            <select name="tuning--seven-string" id="seven-string">
-              <option>Standard</option>
-              <option>Drop Ab</option>
-            </select>
       
             <div class="strings">
               <button class="sevenString-string string string1"></button>

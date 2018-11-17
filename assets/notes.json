@@ -3,27 +3,38 @@
     "sixString": [
       {
         "name": "Standard",
-        "notes": [ "E2", "A", "D", "G", "B", "E4"]
+        "notes": [ "E1", "A1", "D2", "G2", "B2", "E3"]
+      },
+      
+      {
+        "name": "Half Step Down",
+        "notes": [ "Eb1", "Ab1", "Db2", "Gb2", "Bb2", "Eb3"]
       },
 
       {
         "name": "Drop D",
-        "notes": [ "D2", "A", "D", "G", "B", "E4"]
+        "notes": [ "D1", "A1", "D2", "G2", "B2", "E3"]
       },
 
       {
         "name": "Drop C",
-        "notes": [ "C2", "G", "C", "F", "A", "D4"]
+        "notes": [ "C1", "G1", "C2", "F2", "A2", "D3"]
+      },
+
+      {
+        "name": "Drop B",
+        "notes": [ "B0", "Gb1", "B1", "E2", "Ab2", "Db3"]
       }
+
     ],
     "sevenString": [
       {
         "name": "Standard",
-        "notes": [ "B2", "E2", "A", "D", "G", "B", "E4"]
+        "notes": [ "B0", "E1", "A1", "D2", "G2", "B2", "E3"]
       },
       {
         "name": "Drop Ab",
-        "notes": [ "Ab", "Eb2", "Ab", "Db", "Gb", "Bb", "Eb4"]
+        "notes": [ "Ab0", "Eb1", "Ab1", "Db2", "Gb2", "Bb2", "Eb3"]
       }
     ]
   }
