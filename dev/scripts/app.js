@@ -17,7 +17,7 @@ tunerApp.displayGuitar = function() {
   tunerApp.guitarChoice = "sixString";
   $(".six-string").fadeIn();
   tunerApp.setNotes("sixString", 0);
-  $("input").on("change", true, function() {
+  $(".guitar-option").on("change", true, function() {
     tunerApp.guitarChoice = $(this).attr("id");
     // console.log(tunerApp.guitarChoice);
 
@@ -49,7 +49,6 @@ tunerApp.setNotes = function(stringCount, indexOfTuning) {
 
 // gets users tuning choice
 tunerApp.getTuning = function() {
-
   $(`select`).on("change", function() {
     // $(`select`).val('Standard');
     tunerApp.tuning = $(this)
@@ -85,18 +84,20 @@ $(".string").on("click", function() {
   }
   audio = new Audio(`../../assets/music/${tunerApp.playedNote}.wav`);
 
-  audio.addEventListener(
-    "ended",
-    function() {
-      this.currentTime = 0;
-      this.play();
-    },
-    false
-  );
-  audio.play(); 
-
+  if ($(".loop-option").is(":checked")) {
+    console.log("checked");
+    audio.addEventListener(
+      "ended",
+      function() {
+        this.currentTime = 0;
+        this.play();
+      },
+      false
+    );
+    audio.play();
+  } else {
+    audio.play();
+  }
 });
-
-
 
 // stop button?? / if same string if clicked again, the sound clip stops

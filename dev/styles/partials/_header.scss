@@ -1,0 +1,20 @@
+.header-logo {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+ 
+ h1 {
+   @include primaryFont(35);
+    padding-top: 20px;
+    margin: 0;
+  }
+
+  p {
+    @include secondaryFont(16);
+    line-height: 1;
+  }
+
+.logo {
+  width: 80px;
+}

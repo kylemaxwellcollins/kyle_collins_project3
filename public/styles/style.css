@@ -132,79 +132,159 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-main {
-  background: #fafafa;
-  height: 100vh;
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
   color: black; }
-  main h1 {
-    padding: 20px;
-    margin: 0; }
+
+.skip-link:focus {
+  left: 0; }
+
+html {
+  font-size: 62.5%; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: #FAFAFA; }
 
 .wrapper {
-  max-width: 1800px;
-  width: 80%;
+  max-width: 1000px;
+  width: 95%;
   margin: 0 auto; }
 
 .app {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: center; }
+  align-items: center;
+  height: calc(100vh - 115.5px); }
 
-.guitar {
-  text-align: center;
-  max-width: 500px;
+.header-logo {
+  display: flex;
+  align-items: center;
+  margin-top: 25px; }
+
+h1 {
+  font-family: 'Roboto Condensed', Sans-Serif;
+  color: #171717;
+  font-size: 35px;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 20px;
+  margin: 0; }
+
+p {
+  font-family: 'Cabin', Sans-Serif;
+  color: #171717;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 32px;
+  line-height: 1; }
+
+.logo {
+  width: 80px; }
+
+.guitar-option {
+  display: none; }
+
+form {
+  display: flex;
+  flex: 1 0 300px;
+  flex-direction: column;
+  height: auto;
+  background: #ffffff;
+  padding: 10px 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin-left: 3%; }
+  form h3 {
+    font-family: 'Roboto Condensed', Sans-Serif;
+    color: #171717;
+    font-size: 16px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px 0; }
+  form .play-options {
+    margin: 20px 0; }
+
+.guitar-btn,
+.play-options {
+  display: flex;
+  justify-content: space-between;
   width: 100%; }
+
+select {
+  font-family: 'Cabin', Sans-Serif;
+  color: #171717;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 32px;
+  padding: 10px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  background-image: url("../../../assets/images/guitar-pick.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 97% center; }
+
+.label {
+  font-family: 'Cabin', Sans-Serif;
+  color: #171717;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 32px; }
+  .label--guitar-type {
+    padding-bottom: 18px;
+    border: 1px solid #e0e0e0;
+    text-align: center; }
+    .label--guitar-type:hover, .label--guitar-type:focus, .label--guitar-type:checked + label {
+      background: #f38d8d; }
+    .label--guitar-type:hover {
+      cursor: pointer; }
 
 .six-string,
 .seven-string {
   display: none; }
 
+.guitar {
+  text-align: center;
+  max-width: 600px;
+  width: 100%; }
+
 .strings {
+  font-family: 'Roboto Condensed', Sans-Serif;
+  color: #171717;
+  font-size: 18px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   display: flex; }
 
-input {
-  display: none; }
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid #232323;
-  width: 30%; }
-
-.guitar-btn {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 30px; }
-
-select {
-  padding: 10px;
-  margin: 30px 0;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border: 1px solid black;
-  width: 80%;
-  background-image: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png");
-  background-repeat: no-repeat;
-  background-position: 97% center; }
-
-label {
-  padding: 10px;
-  border: 1px solid black; }
-  label:hover {
-    cursor: pointer; }
-
 .string {
-  height: 70vh;
+  height: calc(93vh - 115.5px);
   flex-grow: 1;
   background-size: cover;
   border: none;
   color: #fafafa; }
   .string:hover, .string:focus {
     transform: scale(1.05);
-    box-shadow: 8px 0px 10px #232323;
-    border: 1px solid #fafafa;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.3), 5px 5px 4px rgba(0, 0, 0, 0.6);
     cursor: pointer; }
 
 .string1 {
@@ -234,6 +314,3 @@ label {
 .string7 {
   background: url("../../../assets/images/piece7.jpg") center;
   background-size: cover; }
-
-button {
-  border: none; }

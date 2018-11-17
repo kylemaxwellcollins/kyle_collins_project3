@@ -1,0 +1,58 @@
+.six-string,
+.seven-string {
+  display: none;
+}
+
+.guitar {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.strings {
+  @include primaryFont(18);
+  display: flex;
+}
+
+.string {
+  height: calc(93vh - 115.5px);
+  flex-grow: 1;
+  background-size: cover;
+  border: none;
+  color: #fafafa;
+  &:hover, &:focus {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.3),
+                5px 5px 4px rgba(0, 0, 0, 0.6);
+    // border: 1px solid #fafafa;
+    cursor: pointer;
+  }
+}
+.string1 {
+  background: url("../../../assets/images/piece1.jpg") center;
+  background-size: cover;
+}
+.string2 {
+  background: url("../../../assets/images/piece2.jpg") center;
+  background-size: cover;
+}
+.string3 {
+  background: url("../../../assets/images/piece3.jpg") center;
+  background-size: cover;
+}
+.string4 {
+  background: url("../../../assets/images/piece4.jpg") center;
+  background-size: cover;
+}
+.string5 {
+  background: url("../../../assets/images/piece5.jpg") center;
+  background-size: cover;
+}
+.string6 {
+  background: url("../../../assets/images/piece6.jpg") center;
+  background-size: cover;
+}
+.string7 {
+  background: url("../../../assets/images/piece7.jpg") center;
+  background-size: cover;
+}

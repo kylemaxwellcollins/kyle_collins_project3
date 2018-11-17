@@ -1,123 +1,44 @@
-main {
-  background: #fafafa;
-  height: 100vh;
-  color: rgb(0, 0, 0);
-  h1 {
-    padding: 20px;
-    margin: 0;
-  }
+$black-shade: #171717;
+$white-shade: #FAFAFA;
+$grey-shade: #E0E0E0;
+$accent: #f38d8d;
+
+
+@mixin primaryFont($size) {
+    font-family: 'Roboto Condensed', Sans-Serif;
+    color: $black-shade;
+    font-size: $size * 1px;
+    font-size: ($size / 10) * 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
+@mixin secondaryFont($size) {
+    font-family: 'Cabin', Sans-Serif;
+    color: $black-shade;
+    font-size: $size * 1px;
+    font-size: ($size / 10) * 1rem;
+    line-height: 32px;
+}
+
+body {
+  background: #FAFAFA;
+}
+
+
 .wrapper {
-  max-width: 1800px;
-  width: 80%;
+  max-width: 1000px;
+  width: 95%;
   margin: 0 auto;
 }
 
 .app {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: center;
-}
-
-.guitar {
-  text-align: center;
-  max-width: 500px;
-  width: 100%;
-}
-
-.six-string,
-.seven-string {
-  display: none;
-}
-
-.strings {
-  display: flex;
-}
-
-input {
-  display: none;
-}
-
-form {  
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  border: 1px solid #232323;
-  // margin-right: 3%;
-  width: 30%;
+  height: calc(100vh - 115.5px);
+ 
 }
 
-.guitar-btn {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 30px;
-}
 
-select {
-  padding: 10px;
-  margin: 30px 0;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border: 1px solid black;
-  width: 80%;
-  background-image: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png");
-  background-repeat: no-repeat;
-  background-position: 97% center;
-}
 
-label {
-  padding: 10px;
-  border: 1px solid black;
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.string {
-  height: 70vh;
-  flex-grow: 1;
-  background-size: cover;
-  border: none;
-  color: #fafafa;
-  &:hover, &:focus {
-    transform: scale(1.05);
-    box-shadow: 8px 0px 10px #232323;
-    border: 1px solid #fafafa;
-    cursor: pointer;
-  }
-}
-.string1 {
-  background: url("../../../assets/images/piece1.jpg") center;
-  background-size: cover;
-}
-.string2 {
-  background: url("../../../assets/images/piece2.jpg") center;
-  background-size: cover;
-}
-.string3 {
-  background: url("../../../assets/images/piece3.jpg") center;
-  background-size: cover;
-}
-.string4 {
-  background: url("../../../assets/images/piece4.jpg") center;
-  background-size: cover;
-}
-.string5 {
-  background: url("../../../assets/images/piece5.jpg") center;
-  background-size: cover;
-}
-.string6 {
-  background: url("../../../assets/images/piece6.jpg") center;
-  background-size: cover;
-}
-.string7 {
-  background: url("../../../assets/images/piece7.jpg") center;
-  background-size: cover;
-}
-
-button {
-  // background-image: url("../../../assets/images/john-matychuk-491429-unsplash.jpg");
-  border: none;
-}

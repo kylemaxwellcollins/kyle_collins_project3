@@ -5,62 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>ERG Tuner</title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
     <link rel="stylesheet" href="public/styles/style.css" />
   </head>
   <body>
 
+    <header>
+      <div class="wrapper">
+        <div class="header-logo">
+          <img class="logo" src="./assets/images/tuner.png" alt="">
+          <div class="header-text">
+            <h1>YouTune</h1>
+            <p>Tap the note on the fretboard, tune the string to the tone.</p>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
     <main>
       <section class="wrapper">
-        <h1>ERG Tuner</h1>
-        <div class="app">
 
-          <form class="guitar-form" action="">
-            <div class="guitar-btn">
-              <label for="sixString">6 String</label>
-              <input type="radio" name="guitar" value="six-string" id="sixString">
-              
-              <label for="sevenString">7 String</label>
-              <input type="radio" name="guitar" value="seven-string" id="sevenString">
-              
+        <div class="app-container">
+          <div class="app">
+            <form class="guitar-form" action="">
+              <h3>Switch Guitar</h3>
+              <div class="guitar-btn">
+                <label class="label label--guitar-type" for="sixString">
+                  <img src="assets/images/six-string.png" alt="">
+                  <input class="guitar-option" type="radio" name="guitar" value="six-string" id="sixString">6 String
+                </label>
+                
+                <label class="label label--guitar-type" for="sevenString">
+                  <img src="assets/images/seven-string.png" alt="">
+                  <input class="guitar-option" type="radio" name="guitar" value="seven-string" id="sevenString">7 String
+                </label>
+                
+              </div>
+              <h3>Tuning</h3>
+              <select class="six-string" name="tuning--six-string" id="six-string">
+                <option id="default">Standard</option>
+                <option>Half Step Down</option>
+                <option>Drop D</option>
+                <option>Drop C</option>
+                <option>Drop B</option>
+                <!-- <option>DADGAD</option> -->
+                <!-- <option>Open C</option> -->
+                <!-- <option>Open  D</option> -->
+              </select>
+              <select class="seven-string" name="tuning--seven-string" id="seven-string">
+                <option>Standard</option>
+                <option>Drop Ab</option>
+              </select>
+              <div class="play-options">
+                <div class="loop-option-container">
+                  <input class="loop-option" type="checkbox" id="loop" name="topping" value="loop">
+                  <label class="label label--loop" for="loop">Loop</label>
+                </div>
+                <!-- <button class="stop">Stop</button> -->
+
+              </div>
+
+            </form>
+      
+            <div class="six-string guitar">
+        
+              <div class="strings">
+                <button class="sixString-string string string1"></button>
+                <button class="sixString-string string string2"></button>
+                <button class="sixString-string string string3"></button>
+                <button class="sixString-string string string4"></button>
+                <button class="sixString-string string string5"></button>
+                <button class="sixString-string string string6"></button>
+              </div>
             </div>
-            <select class="six-string" name="tuning--six-string" id="six-string">
-              <option id="default">Standard</option>
-              <option>Half Step Down</option>
-              <option>Drop D</option>
-              <option>Drop C</option>
-              <option>Drop B</option>
-              <!-- <option>DADGAD</option> -->
-              <!-- <option>Open C</option> -->
-              <!-- <option>Open  D</option> -->
-            </select>
-            <select class="seven-string" name="tuning--seven-string" id="seven-string">
-              <option>Standard</option>
-              <option>Drop Ab</option>
-            </select>
-          </form>
-    
-          <div class="six-string guitar">
-      
-            <div class="strings">
-              <button class="sixString-string string string1"></button>
-              <button class="sixString-string string string2"></button>
-              <button class="sixString-string string string3"></button>
-              <button class="sixString-string string string4"></button>
-              <button class="sixString-string string string5"></button>
-              <button class="sixString-string string string6"></button>
-            </div>
-          </div>
-      
-          <div class="seven-string guitar"> 
-      
-            <div class="strings">
-              <button class="sevenString-string string string1"></button>
-              <button class="sevenString-string string string2"></button>
-              <button class="sevenString-string string string3"></button>
-              <button class="sevenString-string string string4"></button>
-              <button class="sevenString-string string string5"></button>
-              <button class="sevenString-string string string6"></button>
-              <button class="sevenString-string string string7"></button>
+        
+            <div class="seven-string guitar"> 
+        
+              <div class="strings">
+                <button class="sevenString-string string string1"></button>
+                <button class="sevenString-string string string2"></button>
+                <button class="sevenString-string string string3"></button>
+                <button class="sevenString-string string string4"></button>
+                <button class="sevenString-string string string5"></button>
+                <button class="sevenString-string string string6"></button>
+                <button class="sevenString-string string string7"></button>
+              </div>
             </div>
           </div>
         </div>

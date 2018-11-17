@@ -1,0 +1,62 @@
+.guitar-option {
+  display: none;
+}
+
+form {
+  display: flex;
+  flex: 1 0 300px;
+  flex-direction: column;
+  height: auto;
+  background: #ffffff;
+  padding: 10px 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin-left: 3%;
+  h3 {
+    @include primaryFont(16);
+    margin: 20px 0;
+  }
+  .play-options {
+    margin: 20px 0;
+  }
+}
+
+
+
+.guitar-btn,
+.play-options {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+select {
+  @include secondaryFont(16);
+  padding: 10px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  background-image: url("../../../assets/images/guitar-pick.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 97% center;
+}
+
+.label {
+  @include secondaryFont(16);
+  &--guitar-type {
+    padding-bottom: 18px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    &:hover, &:focus, &:checked+label{
+      background: $accent;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+}
+
