@@ -157,7 +157,7 @@ p {
   margin: 0; }
 
 body {
-  background: #FAFAFA; }
+  background: #fafafa; }
 
 .wrapper {
   max-width: 1000px;
@@ -170,23 +170,33 @@ body {
   align-items: center;
   height: calc(100vh - 115.5px); }
 
-.header-logo {
+@media (max-width: 840px) {
+  .app {
+    justify-content: center; } }
+
+.header-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-top: 25px; }
 
+.header-logo {
+  display: flex;
+  align-items: center; }
+
 h1 {
-  font-family: 'Roboto Condensed', Sans-Serif;
+  font-family: "Roboto Condensed", Sans-Serif;
   color: #171717;
   font-size: 35px;
   font-size: 3.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding-top: 20px;
   margin: 0; }
+  h1 span {
+    color: #0090d2; }
 
 p {
-  font-family: 'Cabin', Sans-Serif;
+  font-family: "Cabin", Sans-Serif;
   color: #171717;
   font-size: 16px;
   font-size: 1.6rem;
@@ -195,6 +205,16 @@ p {
 
 .logo {
   width: 80px; }
+
+.fa-sliders-h {
+  margin: 20px;
+  display: none;
+  font-size: 30px;
+  color: #171717; }
+
+@media (max-width: 840px) {
+  .fa-sliders-h {
+    display: block; } }
 
 .guitar-option {
   display: none; }
@@ -210,7 +230,7 @@ form {
   border-radius: 5px;
   margin-left: 3%; }
   form h3 {
-    font-family: 'Roboto Condensed', Sans-Serif;
+    font-family: "Roboto Condensed", Sans-Serif;
     color: #171717;
     font-size: 16px;
     font-size: 1.6rem;
@@ -227,7 +247,7 @@ form {
   width: 100%; }
 
 select {
-  font-family: 'Cabin', Sans-Serif;
+  font-family: "Cabin", Sans-Serif;
   color: #171717;
   font-size: 16px;
   font-size: 1.6rem;
@@ -239,24 +259,29 @@ select {
   border: 1px solid #e0e0e0;
   width: 100%;
   background-image: url("../../../assets/images/guitar-pick.png");
-  background-size: 20px;
+  background-size: 25px;
   background-repeat: no-repeat;
-  background-position: 97% center; }
+  background-position: 95% center; }
+  select:hover, select:focus {
+    border: 2px solid #0090d2; }
 
 .label {
-  font-family: 'Cabin', Sans-Serif;
+  font-family: "Cabin", Sans-Serif;
   color: #171717;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 32px; }
   .label--guitar-type {
-    padding-bottom: 18px;
+    padding-bottom: 20px;
     border: 1px solid #e0e0e0;
     text-align: center; }
-    .label--guitar-type:hover, .label--guitar-type:focus, .label--guitar-type:checked + label {
-      background: #f38d8d; }
     .label--guitar-type:hover {
+      border: 2px solid #0090d2;
       cursor: pointer; }
+
+@media (max-width: 840px) {
+  form {
+    display: none; } }
 
 .six-string,
 .seven-string {
@@ -268,49 +293,53 @@ select {
   width: 100%; }
 
 .strings {
-  font-family: 'Roboto Condensed', Sans-Serif;
+  font-family: "Roboto Condensed", Sans-Serif;
   color: #171717;
   font-size: 18px;
   font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  display: flex; }
+  font-weight: bold;
+  display: flex;
+  border: 2px solid #e0e0e0; }
 
 .string {
   height: calc(93vh - 115.5px);
   flex-grow: 1;
   background-size: cover;
   border: none;
-  color: #fafafa; }
+  color: #fafafa;
+  text-shadow: 0px 5px 2px black, 0px -5px 2px black, 5px 0px 2px black, -5px 0px 2px black, 0px 2px 1px black, 0px -2px 1px black, 2px 0px 1px black, -2px 0px 1px black, 0px 10px 5px black, 0px -10px 5px black, 10px 0px 5px black, -10px 0px 5px black; }
   .string:hover, .string:focus {
     transform: scale(1.05);
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.3), 5px 5px 4px rgba(0, 0, 0, 0.6);
-    cursor: pointer; }
+    box-shadow: -5px -5px 20px rgba(0, 144, 210, 0.5), 5px 5px 20px rgba(0, 144, 210, 0.5);
+    border: 2px solid rgba(0, 144, 210, 0.7);
+    text-shadow: rgba(0, 144, 210, 0.8); }
 
 .string1 {
-  background: url("../../../assets/images/piece1.jpg") center;
+  background: url("../../../assets/images/string1.jpg") center;
   background-size: cover; }
 
 .string2 {
-  background: url("../../../assets/images/piece2.jpg") center;
+  background: url("../../../assets/images/string2.jpg") center;
   background-size: cover; }
 
 .string3 {
-  background: url("../../../assets/images/piece3.jpg") center;
+  background: url("../../../assets/images/string3.jpg") center;
   background-size: cover; }
 
 .string4 {
-  background: url("../../../assets/images/piece4.jpg") center;
+  background: url("../../../assets/images/string4.jpg") center;
   background-size: cover; }
 
 .string5 {
-  background: url("../../../assets/images/piece5.jpg") center;
+  background: url("../../../assets/images/string5.jpg") center;
   background-size: cover; }
 
 .string6 {
-  background: url("../../../assets/images/piece6.jpg") center;
+  background: url("../../../assets/images/string6.jpg") center;
   background-size: cover; }
 
 .string7 {
-  background: url("../../../assets/images/piece7.jpg") center;
+  background: url("../../../assets/images/string7.jpg") center;
   background-size: cover; }

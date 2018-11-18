@@ -95,9 +95,8 @@ $(".string").on("click", function() {
       false
     );
     audio.play();
-  } else {
-    audio.play();
   }
+  audio.play();
 });
 
 // stop button?? / if same string if clicked again, the sound clip stops

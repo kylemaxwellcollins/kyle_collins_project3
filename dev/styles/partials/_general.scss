@@ -1,30 +1,28 @@
 $black-shade: #171717;
-$white-shade: #FAFAFA;
-$grey-shade: #E0E0E0;
-$accent: #f38d8d;
-
+$white-shade: #fafafa;
+$grey-shade: #e0e0e0;
+$accent: #0090d2;
 
 @mixin primaryFont($size) {
-    font-family: 'Roboto Condensed', Sans-Serif;
-    color: $black-shade;
-    font-size: $size * 1px;
-    font-size: ($size / 10) * 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  font-family: "Roboto Condensed", Sans-Serif;
+  color: $black-shade;
+  font-size: $size * 1px;
+  font-size: ($size / 10) * 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 @mixin secondaryFont($size) {
-    font-family: 'Cabin', Sans-Serif;
-    color: $black-shade;
-    font-size: $size * 1px;
-    font-size: ($size / 10) * 1rem;
-    line-height: 32px;
+  font-family: "Cabin", Sans-Serif;
+  color: $black-shade;
+  font-size: $size * 1px;
+  font-size: ($size / 10) * 1rem;
+  line-height: 32px;
 }
 
 body {
-  background: #FAFAFA;
+  background: #fafafa;
 }
-
 
 .wrapper {
   max-width: 1000px;
@@ -37,8 +35,10 @@ body {
   flex-direction: row-reverse;
   align-items: center;
   height: calc(100vh - 115.5px);
- 
 }
 
-
-
+@media (max-width: 840px) {
+  .app {
+    justify-content: center;
+  }
+}

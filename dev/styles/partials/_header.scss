@@ -1,20 +1,49 @@
-.header-logo {
+.header-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-top: 25px;
 }
- 
- h1 {
-   @include primaryFont(35);
-    padding-top: 20px;
-    margin: 0;
-  }
 
-  p {
-    @include secondaryFont(16);
-    line-height: 1;
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  @include primaryFont(35);
+  // padding-top: 20px;
+  margin: 0;
+  span {
+    color: $accent;
   }
+}
+
+p {
+  @include secondaryFont(16);
+  line-height: 1;
+}
 
 .logo {
   width: 80px;
 }
+
+.fa-sliders-h {
+  margin: 20px;
+  display: none;
+  font-size: 30px;
+  color: $black-shade;
+}
+
+
+@media (max-width: 840px) {
+  .fa-sliders-h {
+    display: block;
+  }
+}
+
+// @media (max-width: 430px) {
+//   .header-logo {
+//     margin-top: 10px;
+//   }
+// }

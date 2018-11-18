@@ -8,7 +8,7 @@
       
       {
         "name": "Half Step Down",
-        "notes": [ "Eb1", "Ab1", "Db2", "Gb2", "Bb2", "Eb3"]
+        "notes": [ "E♭1", "A♭1", "D♭2", "G♭2", "B♭2", "E♭3"]
       },
 
       {
@@ -23,7 +23,7 @@
 
       {
         "name": "Drop B",
-        "notes": [ "B0", "Gb1", "B1", "E2", "Ab2", "Db3"]
+        "notes": [ "B0", "G♭1", "B1", "E2", "A♭2", "D♭3"]
       }
 
     ],
@@ -34,7 +34,7 @@
       },
       {
         "name": "Drop Ab",
-        "notes": [ "Ab0", "Eb1", "Ab1", "Db2", "Gb2", "Bb2", "Eb3"]
+        "notes": [ "A♭0", "E♭1", "A♭1", "D♭2", "G♭2", "B♭2", "E♭3"]
       }
     ]
   }
