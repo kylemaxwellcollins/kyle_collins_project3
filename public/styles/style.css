@@ -173,7 +173,8 @@ body {
 
 button {
   border: none;
-  background: none; }
+  background: none;
+  padding: 0; }
 
 @media (max-width: 840px) {
   .app {
@@ -250,6 +251,9 @@ form {
   display: flex;
   justify-content: space-between;
   width: 100%; }
+
+img[src*="six-string"] {
+  transform: rotate(10deg); }
 
 select {
   font-family: "Cabin", Sans-Serif;

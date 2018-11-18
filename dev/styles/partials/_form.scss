@@ -28,6 +28,10 @@ form {
   width: 100%;
 }
 
+img[src*="six-string"] {
+    transform: rotate(10deg);
+}
+
 select {
   @include secondaryFont(16);
   padding: 10px;

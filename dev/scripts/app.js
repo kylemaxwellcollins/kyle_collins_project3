@@ -56,7 +56,6 @@ tunerApp.setNotes = function(stringCount, indexOfTuning) {
 // gets users tuning choice
 tunerApp.getTuning = function() {
   $(`select`).on("change", function() {
-    // $(`select`).val('Standard');
     tunerApp.tuning = $(this)
       .children("option:selected")
       .val();
@@ -92,7 +91,6 @@ tunerApp.playNote = function() {
     audio = new Audio(`../../assets/music/${tunerApp.playedNote}.wav`);
 
     if ($(".loop-option").is(":checked")) {
-      console.log("checked");
       audio.addEventListener(
         "ended",
         function() {
@@ -112,5 +110,3 @@ tunerApp.openSettings = function() {
     $("form").toggleClass("open-settings");
   });
 };
-
-// stop button?? / if same string if clicked again, the sound clip stops
