@@ -62,7 +62,17 @@ select {
 @media (max-width: 840px) {
   form {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 10px 0 0 0;
+    z-index: 10;
+  }
 
+  .open-settings {
+    display: block;
   }
 }
 

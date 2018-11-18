@@ -7,20 +7,25 @@ $(function() {
 tunerApp.init = function() {
   $.getJSON("../../assets/notes.json").then(res => {
     tunerApp.data = res.guitars;
+    tunerApp.openSettings();
     tunerApp.displayGuitar();
     tunerApp.getTuning();
+    tunerApp.playNote();
   });
 };
 
 tunerApp.displayGuitar = function() {
   // get users choice of guitar ie. 6 string, 7 string, 8 string
+  // defaults to six string
   tunerApp.guitarChoice = "sixString";
   $(".six-string").fadeIn();
   tunerApp.setNotes("sixString", 0);
   $(".guitar-option").on("change", true, function() {
     tunerApp.guitarChoice = $(this).attr("id");
-    // console.log(tunerApp.guitarChoice);
 
+    // defaults to standard tuning
+    tunerApp.tuning = "Standard";
+    $("select").val("Standard");
     // display correct GUI
     if (tunerApp.guitarChoice === "sixString") {
       $(".six-string").fadeIn();
@@ -36,6 +41,7 @@ tunerApp.displayGuitar = function() {
     }
   });
 };
+
 // ques notes
 tunerApp.setNotes = function(stringCount, indexOfTuning) {
   tunerApp.strings = $(`.${stringCount}-string`);
@@ -74,29 +80,37 @@ tunerApp.getTuning = function() {
 let audio = new Audio();
 
 // listen for string click
-$(".string").on("click", function() {
-  // play correct sound clip
-  tunerApp.playedNote = $(this).html();
+tunerApp.playNote = function() {
+  $(".string").on("click", function() {
+    // play correct sound clip
+    tunerApp.playedNote = $(this).html();
 
-  // play sound clip until a different string is clicked
-  if (!audio.paused) {
-    audio.pause();
-  }
-  audio = new Audio(`../../assets/music/${tunerApp.playedNote}.wav`);
+    // play sound clip until a different string is clicked
+    if (!audio.paused) {
+      audio.pause();
+    }
+    audio = new Audio(`../../assets/music/${tunerApp.playedNote}.wav`);
 
-  if ($(".loop-option").is(":checked")) {
-    console.log("checked");
-    audio.addEventListener(
-      "ended",
-      function() {
-        this.currentTime = 0;
-        this.play();
-      },
-      false
-    );
+    if ($(".loop-option").is(":checked")) {
+      console.log("checked");
+      audio.addEventListener(
+        "ended",
+        function() {
+          this.currentTime = 0;
+          this.play();
+        },
+        false
+      );
+      audio.play();
+    }
     audio.play();
-  }
-  audio.play();
-});
+  });
+};
+
+tunerApp.openSettings = function() {
+  $(".settings").on("click", function() {
+    $("form").toggleClass("open-settings");
+  });
+};
 
 // stop button?? / if same string if clicked again, the sound clip stops

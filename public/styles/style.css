@@ -168,7 +168,12 @@ body {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  height: calc(100vh - 115.5px); }
+  height: calc(100vh - 115.5px);
+  position: relative; }
+
+button {
+  border: none;
+  background: none; }
 
 @media (max-width: 840px) {
   .app {
@@ -281,7 +286,16 @@ select {
 
 @media (max-width: 840px) {
   form {
-    display: none; } }
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 10px 0 0 0;
+    z-index: 10; }
+  .open-settings {
+    display: block; } }
 
 .six-string,
 .seven-string {
